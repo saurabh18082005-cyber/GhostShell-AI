@@ -1,0 +1,5 @@
+[
+  {"name":"Python import error","text":"ModuleNotFoundError: No module named 'requests'"},
+  {"name":"Git push rejected","text":"! [rejected] main -> main (non-fast-forward)\\nerror: failed to push some refs to 'origin'"},
+  {"name":"Port already in use","text":"OSError: [Errno 98] Address already in use"}
+]
