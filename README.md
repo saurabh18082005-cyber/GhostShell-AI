@@ -1,65 +1,63 @@
-# GhostShell AI 👻
+# 👻 GhostShell AI
 
-A haunted-terminal-themed troubleshooting assistant using a hosted Gemma model. Paste terminal output, choose a response style, and receive an explanation or suggested fix.
+An AI-powered haunted terminal assistant that diagnoses errors,
+suggests fixes, and explains technical issues with a spooky twist.
 
-## Features
-- Diagnose terminal errors in beginner-friendly language.
-- Suggest a minimal fix and explain it.
-- Haunted mode adds playful spooky commentary.
-- Responsive interface with sample errors.
-- `/health` endpoint for deployment checks.
-- The app analyzes text only; it never executes commands.
-- API keys are loaded from environment variables.
+## 🚀 Live Demo
 
-## Model and inference
-Configured to call Gemma through the Google Gen AI API. This is **hosted inference**, not local/offline inference. Verify current model availability, account access, quota, pricing and provider terms before use or submission. Do not claim offline operation.
+**Try GhostShell AI here:**
 
-## Run locally (Windows PowerShell)
-1. Install Python 3.10+.
-2. Open this folder in Cursor or a terminal.
-3. Create and activate a virtual environment:
-   ```powershell
-   py -m venv .venv
-   .\.venv\Scripts\Activate.ps1
-   ```
-4. Install dependencies:
-   ```powershell
+🌐 https://ghostshell-ai.onrender.com
+
+## ✨ Features
+
+- 🔍 Diagnose Mode – Understand terminal errors.
+- 🛠️ Fix Mode – Get safe troubleshooting suggestions.
+- 👻 Haunted Mode – Debug with spooky commentary.
+- 🤖 Powered by Google's Gemma model.
+- 🔒 Safe analysis – Never executes terminal commands.
+
+## 🛠️ Tech Stack
+
+- Python
+- Flask
+- Google GenAI SDK
+- Gemma 4
+- HTML, CSS, JavaScript
+- Render
+
+## 💻 Run Locally
+
+1. Clone the repository:
+
+   git clone https://github.com/saurabh18082005-cyber/GhostShell-AI.git
+
+2. Navigate into the project:
+
+   cd GhostShell-AI
+
+3. Install dependencies:
+
    pip install -r requirements.txt
-   ```
-5. Copy `.env.example` to `.env`:
-   ```powershell
-   Copy-Item .env.example .env
-   ```
-6. Edit `.env` and add your own API key. Never share it or commit `.env`.
-7. Start:
-   ```powershell
+
+4. Create a `.env` file and configure:
+
+   GEMINI_API_KEY=your_api_key
+   GEMMA_MODEL=gemma-4-26b-a4b-it
+   FLASK_DEBUG=false
+
+5. Start the application:
+
    python app.py
-   ```
-8. Visit http://127.0.0.1:5000
 
-## Deploy on Render
-1. Push this folder to a GitHub repository.
-2. Create a Render Web Service from that repository.
-3. Build command: `pip install -r requirements.txt`
-4. Start command: `gunicorn app:app`
-5. Health check path: `/health`
-6. Add environment variables in Render:
-   - `GEMINI_API_KEY` = your secret key
-   - `GEMMA_MODEL` = `gemma-3-27b-it`
-7. Deploy and test the public URL.
+6. Open http://127.0.0.1:5000
 
-## Sample inputs
-- `ModuleNotFoundError: No module named 'requests'`
-- `! [rejected] main -> main (non-fast-forward)\nerror: failed to push some refs to 'origin'`
-- `OSError: [Errno 98] Address already in use`
+## ⚠️ Security Notice
 
-## Safety and privacy
-Only paste text you are comfortable sending to the configured model provider. Never paste passwords, tokens, API keys, personal data or confidential logs. The server sends submitted text to the model provider for inference. AI responses can be wrong; review suggestions before running commands.
+GhostShell AI analyzes pasted terminal text only.
+It never executes commands. AI suggestions may not always be correct.
+Never paste API keys, passwords, or confidential information.
 
-## Submission checklist
-- [ ] Add API key securely.
-- [ ] Test the model with multiple real errors.
-- [ ] Confirm model/provider eligibility under the challenge rules.
-- [ ] Deploy and test the live demo.
-- [ ] Explain that inference is hosted, not local.
-- [ ] Don't claim untested features.
+## 👨‍💻 Author
+
+Saurabh Singh
